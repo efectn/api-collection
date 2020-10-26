@@ -22,4 +22,9 @@ $router->get('/pray-time/countries', ['as' => 'countries', 'uses' => 'PrayTimeCo
 $router->get('/pray-time/locations/{country_id:[0-9]+}', ['as' => 'locations', 'uses' => 'PrayTimeController@getLocations']);
 $router->get('/pray-time/times/{location_id:[0-9]+}', ['as' => 'times', 'uses' => 'PrayTimeController@getTimes']);
 
+/* Horoscope API from Hurriyet */
+$router->get('/horoscope/signs', ['as' => 'horoscopes', 'uses' => 'HoroscopeController@getHoroscopes']);
+$router->get('/horoscope/interpretation/{horoscope_name}', ['as' => 'horoscopes.interpretation', 'uses' => 'HoroscopeController@interpretation']);
 
+/* Earthquake API from Kandilli */
+$router->get('/earthquake/list/{limit:[0-9]+}', ['as' => 'earthquake.list', 'uses' => 'EarthquakeController@getEarthquakes']);
