@@ -28,3 +28,7 @@ $router->get('/horoscope/interpretation/{horoscope_name}', ['as' => 'horoscopes.
 
 /* Earthquake API from Kandilli */
 $router->get('/earthquake/list/{limit:[0-9]+}', ['as' => 'earthquake.list', 'uses' => 'EarthquakeController@getEarthquakes']);
+
+/* Currency API from TCMB and X-Rates(converter) */
+$router->get('/currency/tcmb', ['as' => 'currency.tcmb', 'uses' => 'CurrencyController@tcmbCurrencies']);
+$router->get('/currency', ['as' => 'currency', 'uses' => 'CurrencyController@getCurrencies']);
