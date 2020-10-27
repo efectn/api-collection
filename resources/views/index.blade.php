@@ -50,6 +50,41 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow" style="width: 21.5em;margin:0 auto;">
+                            <img class="card-img-top"
+                                 src="{{ URL::to('images/horoscopes.jpg') }}"
+                                 alt="Diyanet">
+                            <div class="card-body">
+                                <b class="card-text">Usage:</b>
+                                <p>Horoscope List: <a href="{{ route('horoscopes') }}">/horoscope/signs</a><br>
+                                    Horoscope Interpretation: <a href="{{ route('horoscopes.interpretation', ['horoscope_name' => 'koc']) }}">/horoscope/interpretation/{horoscope_name}</a></p>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="https://www.hurriyet.com.tr/mahmure/astroloji/" class="btn btn-sm btn-outline-secondary" role="button" aria-pressed="true">Source</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4 box-shadow" style="width: 21.5em;margin:0 auto;">
+                            <img class="card-img-top"
+                                 src="{{ URL::to('images/earthquake.jpg') }}"
+                                 alt="Earthquake">
+                            <div class="card-body">
+                                <b class="card-text">Usage:</b>
+                                <p>Last Earhquakes: <a href="{{ route('earthquake.list', ['limit' => 1000]) }}">/earthquake/list/{limit} (max 1000)</a><br></p>
+
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <a href="http://sc3.koeri.boun.edu.tr/eqevents/events.html" class="btn btn-sm btn-outline-secondary" role="button" aria-pressed="true">Source</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
