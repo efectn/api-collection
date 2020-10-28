@@ -31,4 +31,5 @@ $router->get('/earthquake/list/{limit:[0-9]+}', ['as' => 'earthquake.list', 'use
 
 /* Currency API from TCMB and X-Rates(converter) */
 $router->get('/currency/tcmb', ['as' => 'currency.tcmb', 'uses' => 'CurrencyController@tcmbCurrencies']);
-$router->get('/currency', ['as' => 'currency', 'uses' => 'CurrencyController@getCurrencies']);
+$router->get('/currency/list', ['as' => 'currency', 'uses' => 'CurrencyController@getCurrencies']);
+$router->get('/currency/latest/{from}', ['as' => 'currency', 'uses' => 'CurrencyController@getCurrency']);
