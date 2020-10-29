@@ -47,7 +47,7 @@ class CurrencyController extends Controller
         foreach ($scrapped->find('td[class="rtRates"] > a') as $currency) {
             preg_match_all("@<a href='.*?'>([^<]+)</a>@i", $currency->outertext, $out);
             $name = substr($currency->href, strpos($currency->href, "to") + 3);
-            if ($name != 'TRY') {
+            if ($name != $from) {
                 array_push($rates, [$name => $out[1][0]]);
             }
             $i++;
