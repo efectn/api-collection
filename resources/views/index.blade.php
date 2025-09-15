@@ -31,6 +31,77 @@
     <div class="album py-5 bg-light">
         <div class="container">
             <div class="row">
+                <div class="col-12">
+                    <h2 class="mb-3">Weather</h2>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow" style="width: 21.5em;margin:0 auto;">
+                        <img class="card-img-top"
+                             src="{{ URL::to('images/earthquake.jpg') }}"
+                             alt="Earthquake">
+                        <div class="card-body">
+                            <b class="card-text">Usage:</b>
+                            <p>Last Earhquakes: <a href="{{ route('earthquake.list', ['limit' => 1000]) }}">/earthquake/list/{limit}
+                                    (max 1000)</a><br></p>
+
+                            <p class="mb-2">
+                                <span class="badge badge-success">Free</span>
+                                <span class="ml-2 text-muted">Limit: 1000 per request</span>
+                            </p>
+                            <p class="mb-3">
+                                <a href="http://sc3.koeri.boun.edu.tr/eqevents/events.html" target="_blank">Docs</a>
+                            </p>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="http://sc3.koeri.boun.edu.tr/eqevents/events.html"
+                                       class="btn btn-sm btn-outline-secondary" role="button"
+                                       aria-pressed="true">Source</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <h2 class="mb-3">Maps</h2>
+                    <p class="text-muted">No APIs in this category yet.</p>
+                </div>
+                <div class="col-12">
+                    <h2 class="mb-3">Finance</h2>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow" style="width: 21.5em;margin:0 auto;">
+                        <img class="card-img-top"
+                             src="{{ URL::to('images/currencies.jpeg') }}"
+                             alt="Currencies">
+                        <div class="card-body">
+                            <b class="card-text">Usage:</b>
+                            <p>TCMB Currencies: <a href="{{ route('currency.tcmb') }}">/currency/tcmb</a><br>
+                                Currency Countries: <a href="{{ route('currency.list') }}">/currency/list</a><br>
+                                Get Currency Rates: <a href="{{ route('currency.latest', ['from' => 'TRY']) }}">/currency/latest/{from}</a><br></p>
+                            <p class="mb-2">
+                                <span class="badge badge-success">Free</span>
+                                <span class="ml-2 text-muted">Limit: Not specified</span>
+                            </p>
+                            <p class="mb-3">
+                                <a href="https://www.tcmb.gov.tr/kurlar/today.xml" target="_blank">Docs</a>
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <a href="https://www.x-rates.com/" class="btn btn-sm btn-outline-secondary"
+                                       role="button" aria-pressed="true">Source</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <h2 class="mb-3">Authentication</h2>
+                    <p class="text-muted">No APIs in this category yet.</p>
+                </div>
+                <div class="col-12">
+                    <h2 class="mb-3">Lifestyle</h2>
+                </div>
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow" style="width: 21.5em;margin:0 auto;">
                         <img class="card-img-top"
@@ -41,6 +112,13 @@
                             <p>Country List: <a href="{{ route('countries') }}">/countries</a><br>
                                 Location List: <a href="{{ route('locations', ['country_id' => 1]) }}">/locations/{country_id}</a><br>
                                 Pray Time List: <a href="{{ route('times', ['location_id' => 15153]) }}">/times/{location_id}</a>
+                            </p>
+                            <p class="mb-2">
+                                <span class="badge badge-success">Free</span>
+                                <span class="ml-2 text-muted">Limit: Not specified</span>
+                            </p>
+                            <p class="mb-3">
+                                <a href="https://namazvakitleri.diyanet.gov.tr/" target="_blank">Docs</a>
                             </p>
 
                             <div class="d-flex justify-content-between align-items-center">
@@ -57,12 +135,19 @@
                     <div class="card mb-4 box-shadow" style="width: 21.5em;margin:0 auto;">
                         <img class="card-img-top"
                              src="{{ URL::to('images/horoscopes.jpg') }}"
-                             alt="Diyanet">
+                             alt="Horoscopes">
                         <div class="card-body">
                             <b class="card-text">Usage:</b>
                             <p>Horoscope List: <a href="{{ route('horoscopes') }}">/horoscope/signs</a><br>
                                 Horoscope Interpretation: <a
                                     href="{{ route('horoscopes.interpretation', ['horoscope_name' => 'koc']) }}">/horoscope/interpretation/{horoscope_name}</a>
+                            </p>
+                            <p class="mb-2">
+                                <span class="badge badge-success">Free</span>
+                                <span class="ml-2 text-muted">Limit: Not specified</span>
+                            </p>
+                            <p class="mb-3">
+                                <a href="https://www.hurriyet.com.tr/mahmure/astroloji/" target="_blank">Docs</a>
                             </p>
 
                             <div class="d-flex justify-content-between align-items-center">
@@ -70,45 +155,6 @@
                                     <a href="https://www.hurriyet.com.tr/mahmure/astroloji/"
                                        class="btn btn-sm btn-outline-secondary" role="button"
                                        aria-pressed="true">Source</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow" style="width: 21.5em;margin:0 auto;">
-                        <img class="card-img-top"
-                             src="{{ URL::to('images/earthquake.jpg') }}"
-                             alt="Earthquake">
-                        <div class="card-body">
-                            <b class="card-text">Usage:</b>
-                            <p>Last Earhquakes: <a href="{{ route('earthquake.list', ['limit' => 1000]) }}">/earthquake/list/{limit}
-                                    (max 1000)</a><br></p>
-
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="http://sc3.koeri.boun.edu.tr/eqevents/events.html"
-                                       class="btn btn-sm btn-outline-secondary" role="button"
-                                       aria-pressed="true">Source</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow" style="width: 21.5em;margin:0 auto;">
-                        <img class="card-img-top"
-                             src="{{ URL::to('images/currencies.jpeg') }}"
-                             alt="Earthquake">
-                        <div class="card-body">
-                            <b class="card-text">Usage:</b>
-                            <p>TCMB Currencies: <a href="{{ route('currency.tcmb') }}">/currency/tcmb</a><br>
-                                Currency Countries: <a href="{{ route('currency.list') }}">/currency/list</a><br>
-                                Get Currency Rates: <a href="{{ route('currency.latest', ['from' => 'TRY']) }}">/currency/latest/{from}</a><br></p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="https://www.x-rates.com/" class="btn btn-sm btn-outline-secondary"
-                                       role="button" aria-pressed="true">Source</a>
                                 </div>
                             </div>
                         </div>
@@ -131,3 +177,4 @@
 </body>
 
 </html>
+
